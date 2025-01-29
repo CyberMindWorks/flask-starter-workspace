@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flask",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "./run.py", // Assuming run.py is the entry point
+      "args": ["run", "--host=0.0.0.0", "--port=5000"], // Customize the port if needed
+      "console": "integratedTerminal",
+      "env": {
+        "FLASK_APP": "./run.py", // Set Flask app
+        "FLASK_ENV": "development", // Development environment
+        "PYTHONPATH": "/config/myproject:/opt/venv/bin"
+      },
+      "python": "/opt/venv/bin/python"
+    }
+  ]
+}
